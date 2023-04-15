@@ -9,12 +9,13 @@ from pprint import pprint
 
 load_dotenv()
 
-linkedin_msg_arr = []
-regular_apply_arr = [("reg_apply", "reg_apply")
+linkedin_msg_arr = ["title"]
+regular_apply_arr = [
+("name of company", "position title")
 ]
 
 high_quality_apply_arr = [
-("high_quality", "high_quality")
+("name of company", "position title")
 ]
 
 headers = {
