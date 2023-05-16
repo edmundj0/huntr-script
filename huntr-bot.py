@@ -5,18 +5,18 @@ import json, random
 from datetime import datetime
 from dotenv import load_dotenv
 from pprint import pprint
-
+from parse_csv import parse_csv
 
 load_dotenv()
 
-linkedin_msg_arr = ["title"]
-regular_apply_arr = [
-("name of company", "position title")
-]
+csv_data = parse_csv()
 
-high_quality_apply_arr = [
-("name of company", "position title")
-]
+
+linkedin_msg_arr = []
+regular_apply_arr = []
+high_quality_apply_arr = []
+
+high_quality_apply_arr.extend(csv_data) #edit this line!!!
 
 headers = {
     "Authorization": f"Bearer {os.getenv('ACCESS_TOKEN')}",
